@@ -1,0 +1,15 @@
+.card {
+  &__box {
+    width: 22rem;
+    height: 35rem;
+    border-radius: 1rem;
+    margin: 2rem 1rem;
+  }
+
+  &__img {
+    width: 22rem;
+    height: 35rem;
+    border-radius: 2rem;
+    object-fit: cover;
+  }
+}

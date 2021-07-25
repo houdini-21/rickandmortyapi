@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import './styles/charactersTemplate.scss'
 
 const CharactersTemplate = ({ character }) => {
   return (
-    <div className="container">
-      <div className="card-character">
-        {character.map((item) => (
-          <div className="card" key={item.id}>
-            {item.name}
-            <br />
+    <Fragment>
+      {character.map((item) => (
+        <div className="card__box" key={item.id}>
+          <img className="card__img" src={item.image} alt="" />
+          <div className="card__box-title">
+            <p className="card__name-p"></p>
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      ))}
+    </Fragment>
   );
 };
 

@@ -1,0 +1,21 @@
+.parallax {
+  &__box {
+    background-image: url('../images/bg-2.jpg');
+    height: 40rem;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 5rem;
+    color: #fff;
+    text-align: center;
+    width: 60%;
+  }
+}

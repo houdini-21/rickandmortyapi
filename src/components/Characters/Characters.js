@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CharactersTemplate from '../CharactersTemplate/CharactersTemplate';
+import './styles/character.scss';
 
 function Characters() {
   const [character, setCharacter] = useState([]);
@@ -36,16 +37,21 @@ function Characters() {
   };
 
   return (
-    <div>
-      {loading ? (
-        <p>loading</p>
-      ) : (
-        <>
-          <CharactersTemplate character={character} />
-        </>
-      )}
-      <button onClick={prev}>prev</button>
-      <button onClick={next}>nest</button>
+    <div className="character">
+      <div className="character__box">
+        {loading ? (
+          <p>loading</p>
+        ) : (
+          <>
+            <CharactersTemplate character={character} />
+          </>
+        )}
+      </div>
+
+      <div className="character__btns-box">
+        <button onClick={prev}>prev</button>
+        <button onClick={next}>nest</button>
+      </div>
     </div>
   );
 }

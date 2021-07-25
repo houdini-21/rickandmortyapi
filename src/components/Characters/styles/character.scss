@@ -1,0 +1,18 @@
+.character {
+  position: relative;
+
+  &__box {
+    height: 164rem;
+    padding: 3rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__btns-box {
+    position: absolute;
+    top: 50%;
+  }
+}
