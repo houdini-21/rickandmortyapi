@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'cereal-bold';
+  src: url(./fonts/AirbnbCerealBold.ttf);
+}
+
+@font-face {
+  font-family: 'cereal-book';
+  src: url(./fonts/AirbnbCerealBook.ttf);
+}
+
+@font-face {
+  font-family: 'cereal-black';
+  src: url(./fonts/AirbnbCerealBlack.ttf);
+}
+@font-face {
+  font-family: 'cereal-light';
+  src: url(./fonts/AirbnbCerealLight.ttf);
+}
+@font-face {
+  font-family: 'cereal-medium';
+  src: url(./fonts/AirbnbCerealMedium.ttf);
+}
+@font-face {
+  font-family: 'cereal-extra';
+  src: url(./fonts/AirbnbCerealExtraBold.ttf);
+}
