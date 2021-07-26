@@ -1,9 +1,18 @@
 .character {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem 5rem;
+
+  &__title {
+    color: #2f352f;
+    font-family: 'cereal-book';
+    font-size: 4.5rem;
+    width: 94%;
+  }
 
   &__box {
-    height: 164rem;
-    padding: 3rem 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +21,25 @@
   }
 
   &__btns-box {
-    position: absolute;
-    top: 50%;
+    width: 100%;
+  }
+
+  &__btn-item {
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 70%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: #fafafa;
+    border: 2px solid #2f352f;
+
+    &-p {
+      color: #2f352f;
+      font-family: 'cereal-medium';
+      font-size: 3rem;
+    }
   }
 }

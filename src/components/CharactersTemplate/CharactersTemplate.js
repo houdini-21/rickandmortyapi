@@ -8,7 +8,7 @@ const CharactersTemplate = ({ character }) => {
         <div className="card__box" key={item.id}>
           <img className="card__img" src={item.image} alt="" />
           <div className="card__box-title">
-            <p className="card__name-p"></p>
+            <p className="card__name-p">{item.name}</p>
           </div>
         </div>
       ))}

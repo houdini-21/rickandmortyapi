@@ -4,6 +4,29 @@
     height: 35rem;
     border-radius: 1rem;
     margin: 2rem 1rem;
+    position: relative;
+
+    &-title {
+      height: 0px;
+      width: 100%;
+      background-color: rgba(80, 191, 119, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: center;
+      flex-direction: column;
+      transition: 0.6s;
+      bottom: 0;
+      position: absolute;
+      opacity: 0;
+      border-radius: 1rem;
+    }
+
+    &:hover
+    &-title {
+      height: 35rem;
+      opacity: 1;
+    }
   }
 
   &__img {

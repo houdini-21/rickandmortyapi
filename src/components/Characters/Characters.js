@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import ReactDOM from 'react-dom';
 import CharactersTemplate from '../CharactersTemplate/CharactersTemplate';
 import './styles/character.scss';
 
@@ -10,47 +10,36 @@ function Characters() {
   const [limitPage, setLimitPage] = useState(1);
 
   useEffect(() => {
-    fetchData(page);
+    setLoading(true);
+    let url = `https://rickandmortyapi.com/api/character/?page=${page}`;
+    fetch(url)
+      .then((res) => res.json())
+      .then((response) => {
+        setCharacter(character.concat(response.results));
+        setLimitPage(response.info.pages);
+        setLoading(false);
+      });
   }, [page]);
 
-  const fetchData = async (pag) => {
-    let url = `https://rickandmortyapi.com/api/character/?page=${pag}`;
-    setLoading(true);
-    const res = await axios.get(url);
-    setCharacter(res.data.results);
-    setLimitPage(res.data.info.pages);
-    setLoading(false);
-  };
-
-  const next = () => {
+  const loadMore = () => {
     if (page <= limitPage) {
       setPage(page + 1);
-      fetchData(page);
-    }
-  };
-
-  const prev = () => {
-    if (page > 1) {
-      setPage(page - 1);
-      fetchData(page);
     }
   };
 
   return (
     <div className="character">
+      <h2 className="character__title">Characters</h2>
       <div className="character__box">
-        {loading ? (
-          <p>loading</p>
-        ) : (
-          <>
-            <CharactersTemplate character={character} />
-          </>
-        )}
+        <CharactersTemplate character={character} />
       </div>
 
       <div className="character__btns-box">
-        <button onClick={prev}>prev</button>
-        <button onClick={next}>nest</button>
+        <div className="character__btn-item" onClick={loadMore}>
+          <p className="character__btn-item-p">
+            {loading ? 'loading...' : 'Load More'}
+          </p>
+        </div>
       </div>
     </div>
   );
