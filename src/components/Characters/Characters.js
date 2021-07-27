@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
 import CharactersTemplate from '../CharactersTemplate/CharactersTemplate';
 import './styles/character.scss';
 
@@ -15,7 +14,7 @@ function Characters() {
     fetch(url)
       .then((res) => res.json())
       .then((response) => {
-        setCharacter(character.concat(response.results));
+        setCharacter((character) => character.concat(response.results));
         setLimitPage(response.info.pages);
         setLoading(false);
       });
