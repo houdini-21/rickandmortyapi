@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CharactersTemplate from '../CharactersTemplate/CharactersTemplate';
-import './styles/character.scss';
+import '../../styles/character.scss';
 
 function Characters() {
   const [character, setCharacter] = useState([]);

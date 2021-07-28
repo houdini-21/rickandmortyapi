@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/parallax.scss';
+import '../../styles/parallax.scss';
 
 const Parallax = () => {
   return (

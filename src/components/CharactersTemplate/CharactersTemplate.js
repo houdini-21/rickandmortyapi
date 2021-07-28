@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import './styles/charactersTemplate.scss'
+import '../../styles/charactersTemplate.scss';
 
 const CharactersTemplate = ({ character }) => {
   return (

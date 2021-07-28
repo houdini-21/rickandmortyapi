@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from './images/logo.png';
-import header from './images/header.png';
+import logo from '../../images/logo.png';
+import header from '../../images/header.png';
 import CharacterInfo from '../CharacterInfo/CharacterInfo';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import './styles/header.scss';
+import '../../styles/header.scss';
 
 const Header = () => {
   return (
