@@ -38,3 +38,30 @@ body {
   font-family: 'cereal-extra';
   src: url(./fonts/AirbnbCerealExtraBold.ttf);
 }
+
+$grey: #6d6e6a;
+$black: #2f352f;
+.navbar {
+  &__box {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+  }
+
+  &__item {
+    &-logo {
+      width: 23rem;
+    }
+
+    &-p {
+      font-family: 'cereal-bold';
+      font-size: 1.5rem;
+      color: $black;
+    }
+  }
+}
