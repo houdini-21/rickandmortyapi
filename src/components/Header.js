@@ -12,13 +12,6 @@ const Header = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae atque
             perspiciatis dolor illum officiis?
           </p>
-          <br />
-          <br />
-          <input
-            type="text"
-            className="header__input"
-            placeholder="&#x1F50E;&#xFE0E;	 Search"
-          />
         </div>
         <div className="header__img-box">
           <img className="header__img" src={header} alt="" />

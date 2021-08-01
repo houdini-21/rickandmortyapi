@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import CharactersTemplate from './CharactersTemplate';
+import LocationsTemplate from './LocationsTemplate';
 import '../styles/character.scss';
 
-function Characters() {
-  const [character, setCharacter] = useState([]);
+function Locations() {
+  const [locations, setLocations] = useState([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [limitPage, setLimitPage] = useState(1);
 
   useEffect(() => {
     setLoading(true);
-    let url = `https://rickandmortyapi.com/api/character/?page=${page}`;
+    let url = `https://rickandmortyapi.com/api/location?page=${page}`;
     fetch(url)
       .then((res) => res.json())
       .then((response) => {
-        setCharacter((character) => character.concat(response.results));
+        setLocations((locations) => locations.concat(response.results));
         setLimitPage(response.info.pages);
         setLoading(false);
       });
@@ -28,9 +28,9 @@ function Characters() {
 
   return (
     <div className="character">
-      <h2 className="character__title">Characters</h2>
+      <h2 className="character__title">Locations</h2>
       <div className="character__box">
-        <CharactersTemplate character={character} />
+        <LocationsTemplate locations={locations} />
       </div>
 
       <div className="character__btns-box">
@@ -44,4 +44,4 @@ function Characters() {
   );
 }
 
-export default Characters;
+export default Locations;
