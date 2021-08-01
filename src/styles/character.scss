@@ -44,3 +44,38 @@
     }
   }
 }
+
+.padding-top-95 {
+  padding-top: 9.5rem;
+}
+
+.card {
+  &__episode {
+    height: 15rem;
+    width: 25rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    margin: 2rem;
+
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-family: 'cereal-bold';
+    color: #2f352f;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 1.6rem;
+    font-family: 'cereal-book';
+    color: #2f352f;
+    text-align: center;
+  }
+}

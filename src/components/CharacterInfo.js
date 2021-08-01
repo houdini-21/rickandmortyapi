@@ -4,12 +4,12 @@ import '../styles/characterInfo.scss';
 function CharacterInfo(props) {
   const { match } = props;
   const [characterInfo, setCharacterInfo] = useState([]);
-  const [loading, setLoading] = useState(false);
+  //  const [loading, setLoading] = useState(false);
   const [local, setLocal] = useState('');
   const [origin, setOrigin] = useState('');
 
   useEffect(() => {
-    setLoading(true);
+    //   setLoading(true);
     let url = `https://rickandmortyapi.com/api/character/${match.params.id}`;
     fetch(url)
       .then((res) => res.json())
@@ -17,7 +17,7 @@ function CharacterInfo(props) {
         setCharacterInfo(response);
         setLocal(response.location.name);
         setOrigin(response.origin.name);
-        setLoading(false);
+        ///     setLoading(false);
       });
   }, [match.params.id]);
 

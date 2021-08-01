@@ -1,13 +1,10 @@
 import React from 'react';
 import '../styles/parallax.scss';
 
-const Parallax = () => {
+const Parallax = ({ title }) => {
   return (
     <section className="parallax__box">
-      <h2 className="parallax__title">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo,
-        vero!
-      </h2>
+      <h2 className="parallax__title">{title}</h2>
     </section>
   );
 };

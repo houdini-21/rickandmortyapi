@@ -8,7 +8,7 @@ class Home extends Component {
     return (
       <div>
         <Header />
-        <Parallax />
+        <Parallax title="School is not a place for smart people" />
         <Characters />
       </div>
     );
